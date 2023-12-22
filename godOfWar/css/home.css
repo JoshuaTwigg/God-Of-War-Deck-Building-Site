@@ -1,0 +1,170 @@
+@font-face {
+    font-family: norse;
+    src: url(../font/norse/Norse.otf);
+}
+
+body{
+    font-family: norse !important;
+    background-image: url(../images/scene2.jpg);
+    background-repeat:no-repeat;
+    background-size: auto !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+.navbar-brand img{
+    width: 30px;
+    height:30px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+
+#navbarSupportedContent ul li a{
+    color: white !important;
+    font-size: 30px;
+    z-index: 99;
+}
+
+
+hgroup{
+    text-align: center;
+}
+
+hgroup h1,h2{
+    font-size: 150px;
+}
+
+#kratosDiv{
+    position: relative;
+}
+
+#mainKratos{
+    position: absolute;
+    width:850px;
+    height:895px;
+    animation: breathe 2s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+    margin-top: -120px;
+    
+}
+
+
+@keyframes breathe {
+    0%   { transform: scale(1.0);}
+  
+    50%  { transform: scale(1.01);}
+   
+    100% { transform: scale(1.0);}
+  }
+
+#mainButton{
+    background-color: transparent;
+    font-size: 40px;
+    z-index: 2;
+    color: white;
+    border-color: white !important;
+    width: 250px;
+    height:65px; 
+    transition: all 0.6s ease-in-out;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-top: 1100px;
+}
+
+#mainButton:hover{
+    
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 50px 100px rgba(247, 232, 102, 0.4);     
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.025);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    text-shadow: 0 0 7px rgb(224, 11, 11), 0 0 122px rgb(173 236 175);
+    background-color: rgb(229, 235, 250);
+
+}
+
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.center{
+    text-align: center;
+}
+
+.imageSize{
+    width:600px;
+    height:700px
+}
+
+.container{
+    text-align: center;
+    padding-bottom: 500px;
+    margin-top: 100px;
+}
+
+#textColumn{
+    /* background-image: url(../images/horse.png);
+    background-repeat:no-repeat;
+    background-size: 100% 600px;
+    background-position: center bottom; */
+}
+
+#horseImg{
+    width:100%;
+    height:80%;
+    transform: translateX(20px);
+    transition: all 0.8s ease-in-out;
+    opacity: 0;
+}
+
+
+.show{
+    opacity: 1.5 !important;
+    transform: translateX(0px) !important;
+}
+
+@media only screen and (max-width: 900px) {
+   #mainKratos{
+        width:550px;
+        height:800px;
+        margin-top: -10px;
+   }
+   #horseImg{
+    width:100%;
+    height:100%;
+   }
+   #boy{
+    width:100%;
+    height:100%
+    
+   }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #mainKratos{
+         width:500px;
+         height:600px;
+         margin-top: 15px;
+    }
+    #horseImg{
+        width:100%;
+        height:80%;
+        transition: all 0.8s ease-in-out;
+        opacity: 0;
+    }
+ 
+   }
